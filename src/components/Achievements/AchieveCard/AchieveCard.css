@@ -1,0 +1,36 @@
+.achieve-card {
+  font-family: 'DMSans', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  background-color: white;
+  border-radius: 30px;
+  border: none;
+  padding: 0 0 10px;
+  gap: 20px;
+  box-shadow: 0px 5px 35px 0px #00000040;
+  transition: scale 0.1s ease-in 0s;
+}
+
+.achieve-card:hover {
+  scale: 0.95;
+}
+
+.achieve-card__image {
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  border-radius: 30px 30px 0 0;
+  height: 300px;
+}
+
+.achieve-card__title {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.achieve-card__place {
+  font-size: 16px;
+  line-height: 28px;
+}

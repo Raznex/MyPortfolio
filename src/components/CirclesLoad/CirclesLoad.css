@@ -1,0 +1,116 @@
+.container {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 600px;
+  height: 600px;
+}
+.container .circle {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+  background: rgba(138, 43, 226, 0.02);
+}
+.container .circle:nth-of-type(1) {
+  width: 500px;
+  height: 480px;
+  animation: rt 6s infinite linear;
+  box-shadow:
+    0 0 1px 0 blueviolet,
+    inset 0 0 10px 0 #3700ff;
+}
+.container .circle:nth-of-type(2) {
+  width: 480px;
+  height: 500px;
+  animation: rt 10s infinite linear;
+  box-shadow:
+    0 0 1px 0 darkviolet,
+    inset 0 0 10px 0 darkviolet;
+}
+.container .circle:nth-of-type(3) {
+  width: 510px;
+  height: 490px;
+  animation: rt 5s infinite linear;
+  box-shadow:
+    0 0 1px 0 darkmagenta,
+    inset 0 0 10px 0 #8b006b;
+}
+.container .circle:nth-of-type(4) {
+  width: 490px;
+  height: 510px;
+  animation: rt 15s infinite linear;
+  box-shadow:
+    0 0 1px 0 magenta,
+    inset 0 0 10px 0 #d703b4;
+}
+
+@keyframes rt {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .container {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+  }
+  .container .circle:nth-of-type(1) {
+    width: 300px;
+    height: 280px;
+  }
+  .container .circle:nth-of-type(2) {
+    width: 280px;
+    height: 300px;
+  }
+  .container .circle:nth-of-type(3) {
+    width: 310px;
+    height: 290px;
+  }
+  .container .circle:nth-of-type(4) {
+    width: 290px;
+    height: 310px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .container {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+  }
+  .container .circle:nth-of-type(1) {
+    width: 250px;
+    height: 230px;
+  }
+  .container .circle:nth-of-type(2) {
+    width: 230px;
+    height: 250px;
+  }
+  .container .circle:nth-of-type(3) {
+    width: 240px;
+    height: 220px;
+  }
+  .container .circle:nth-of-type(4) {
+    width: 220px;
+    height: 240px;
+  }
+}
