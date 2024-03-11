@@ -23,7 +23,7 @@ const Footer = () => {
             <img src={github} alt='git' className='footer__logo' />
           </a>
         </div>
-        <p className='footer__desc'>© 2024 Burkoveckii Andrey</p>
+        <p className='footer__desc'>© 2024 Burkoveckiy Andrei</p>
       </div>
     </div>
   );
