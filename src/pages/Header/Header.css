@@ -46,3 +46,9 @@
 .carousel__back:hover {
   opacity: 0.5;
 }
+
+@media screen and (max-width: 700px) {
+  .header__up {
+    padding: 20px 15px;
+  }
+}
