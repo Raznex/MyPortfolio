@@ -1,17 +1,22 @@
 import React from 'react';
-import { achieve } from '../../../assets/constants/constants';
+import { IProjects } from '../../../assets/constants/constants';
+import './ProjectCard.css';
 
-interface IAchieveCard {
-  card: achieve;
+interface IProjectCard {
+  card: IProjects;
+  onClick: () => void;
 }
 
-const ProjectCard: React.FC<IAchieveCard> = ({ card }) => {
+const ProjectCard: React.FC<IProjectCard> = ({ card, onClick }) => {
   return (
     <>
-      <button className='projects-card'>
-        <img src={card.img} alt={card.name} className='projects-card__image' />
+      <button className='projects-card' onClick={onClick}>
+        <img
+          src={card.img[0].path}
+          alt={card.name}
+          className='projects-card__image'
+        />
         <p className='projects-card__title'>{card.name}</p>
-        <p className='projects-card__place'>Место: {card.place}</p>
       </button>
     </>
   );

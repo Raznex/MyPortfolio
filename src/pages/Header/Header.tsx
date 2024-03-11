@@ -1,14 +1,33 @@
 import AboutMe from '../../components/AboutMe/AboutMe';
 import './Header.css';
+import { useLocation, useNavigate } from 'react-router-dom';
+import React from 'react';
 
 const Header = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
   return (
     <div className='header'>
       <div className='header__container'>
         <div className='header__up'>
-          <p className='header__logo'>PORTFOLIO</p>
+          <button
+            className='header__logo'
+            onClick={() => navigate(`/`, { replace: true })}
+          >
+            PORTFOLIO
+          </button>
+          {location.pathname !== '/' ? (
+            <button
+              className='carousel__back'
+              onClick={() => navigate(`/`, { replace: true })}
+            >
+              Назад
+            </button>
+          ) : (
+            ''
+          )}
         </div>
-        <AboutMe />
+        {location.pathname === '/' ? <AboutMe /> : ''}
       </div>
     </div>
   );

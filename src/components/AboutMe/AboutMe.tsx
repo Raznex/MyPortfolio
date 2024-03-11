@@ -23,7 +23,7 @@ const AboutMe = () => {
             target='_blank'
             className='about__github'
           >
-            Мой Github
+            My Github
           </a>
         </div>
       </div>

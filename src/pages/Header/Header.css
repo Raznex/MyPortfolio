@@ -16,12 +16,15 @@
 .header__up {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 30px 40px;
   border-bottom: 1px solid #26292d;
   width: 100%;
 }
 
 .header__logo {
+  background-color: transparent;
+  border: none;
   color: white;
   font-size: 30px;
   font-weight: 700;
@@ -29,4 +32,17 @@
 
 .header__load {
   position: absolute;
+}
+
+.carousel__back {
+  color: white;
+  border: none;
+  background-color: transparent;
+  font-size: 24px;
+  padding: 10px 10px 10px 30px;
+  transition: opacity 0.2s ease;
+}
+
+.carousel__back:hover {
+  opacity: 0.5;
 }

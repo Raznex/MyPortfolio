@@ -1,15 +1,17 @@
 import React from 'react';
 import './Projects.css';
-import { achieve } from '../../assets/constants/constants';
+import { useNavigate } from 'react-router-dom';
+import { projects } from '../../assets/constants/constants';
 import ProjectCard from './ProjectCard/ProjectCard';
 const Projects = () => {
+  const navigate = useNavigate();
   return (
     <div className='projects'>
-      {achieve.map((item) => (
+      {projects.map((item) => (
         <ProjectCard
           key={'key' + item.id}
           card={item}
-          // onClick={() => handleCardClick(index)}
+          onClick={() => navigate(`/${item.id}`, { replace: true })}
         />
       ))}
     </div>

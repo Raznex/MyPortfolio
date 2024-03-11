@@ -4,7 +4,7 @@ import { achieve } from '../../../assets/constants/constants';
 
 interface IAchieveCard {
   card: achieve;
-  onClick: () => void; // Добавляем проп onClick
+  onClick: () => void;
 }
 
 const AchieveCard: React.FC<IAchieveCard> = ({ card, onClick }) => {

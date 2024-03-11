@@ -1,33 +1,26 @@
-import Carousel from 'react-bootstrap/Carousel';
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
 import './Carousel.css';
-const UncontrolledExample = () => {
-  return (
-    <Carousel className='carousel' interval={null}>
-      <Carousel.Item>
-        <div className='carousel__item'>G</div>
-        <Carousel.Caption>
-          <h3>Имя проекта</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <div className='carousel__item'>G</div>
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <div className='carousel__item'>G</div>
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
-  );
+import React from 'react';
+import { IProjects } from '../../assets/constants/constants';
+
+interface ICarousel {
+  project: IProjects;
+}
+
+const CarouselCard: React.FC<ICarousel> = ({ project }) => {
+  const items = [
+    ...project.img.map((image) => (
+      <div key={image.id} className='item'>
+        <img
+          src={image.path}
+          alt={'картинка' + image.id}
+          className='carousel__image'
+        />
+      </div>
+    )),
+  ];
+  return <AliceCarousel mouseTracking items={items} infinite={true} />;
 };
 
-export default UncontrolledExample;
+export default CarouselCard;

@@ -1,8 +1,15 @@
-.carousel {
-  width: 100%;
-  border-radius: 30px;
+.alice-carousel {
 }
-.carousel__item {
-  height: 500px;
-  background-color: #073042;
+.carousel__image {
+  display: flex;
+  align-items: center;
+  object-position: center;
+  object-fit: contain;
+  width: 100%;
+  max-height: 800px;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
 }
