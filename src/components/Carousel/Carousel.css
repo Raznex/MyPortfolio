@@ -13,20 +13,54 @@
   display: flex;
   justify-content: center;
 }
+.alice-carousel__next-btn-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alice-carousel__next-btn-item:nth-child(1) {
+  color: #26292d;
+  font-size: 40px;
+  opacity: 0;
+  text-align: center;
+  transition: opacity 0.3s ease;
+}
+
+.alice-carousel__next-btn-item:nth-child(1):hover {
+  opacity: 0.7;
+}
+
+.alice-carousel__prev-btn-item:nth-child(1) {
+  color: #26292d;
+  font-size: 40px;
+  opacity: 0;
+  text-align: center;
+  transition: opacity 0.3s ease;
+}
+
+.alice-carousel__prev-btn-item:nth-child(1):hover {
+  opacity: 0.7;
+}
 
 .alice-carousel__prev-btn [data-area]::after {
-  color: transparent;
   position: absolute;
   left: 0;
   top: 0;
   width: 15%;
   height: 100%;
+  padding-top: 25%;
 }
 .alice-carousel__next-btn [data-area]::after {
-  color: transparent;
   position: absolute;
   right: 0;
   top: 0;
   width: 15%;
   height: 100%;
+  padding-top: 25%;
+}
+
+.alice-carousel__next-btn [data-area]::after:hover {
+  background-color: #26292d;
+  opacity: 0.5;
 }
