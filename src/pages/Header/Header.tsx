@@ -1,7 +1,6 @@
 import AboutMe from '../../components/AboutMe/AboutMe';
 import './Header.css';
 import { useLocation, useNavigate } from 'react-router-dom';
-import React from 'react';
 
 const Header = () => {
   const location = useLocation();
